@@ -30,6 +30,7 @@ Using the termial application of your choice:
     python bikeshare.py
 ```
 - follow the interactive prompts in your terminal 😃
+Note: inputs are case insensitive, however correct city spelling is important for the script to recognise the city for which bikeshare data you wish to view.
 
 ## Credits
 A huge thanks to the Udacity team without whom this project would not have been possible.
