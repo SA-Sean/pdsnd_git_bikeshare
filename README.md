@@ -1,4 +1,4 @@
-># Bikeshare
+># Bikeshare ![Static Badge](https://img.shields.io/badge/version-1.0.0-green)
 Bikehsare is a <code>python</code> script that gives the user a view of descriptive statistics and insights into bike share service data for 3 US cities - Chicago, New York City and Washington, through an interactive terminal experience with simple command line prompted inputs.
 
 ## Created
@@ -19,21 +19,23 @@ You will also need a local terminal application, such as Powershell, to execute 
 
 ## Data Required
 Bikeshre data for three US cities is required for analysis. Namely: Chicago, New York City, Washington.
-Data for each US city should be contained in its own, separate csv file.
+Data for each US city should be contained in its own, separate <code>csv</code> file.
 Ensure the bikeshare data files are placed in the same folder as the Bikeshare python script. 
 
 ## Running Bikeshare
 Using the termial application of your choice:
-- cd into the folder where the bikeshare.py script is located
+- <code>cd</code> into the folder where the bikeshare.py script is located
 - enter the following command: 
-
+```
     python bikeshare.py
-
-- follow the interactive prompts in your terminal
+```
+- follow the interactive prompts in your terminal 😃
 
 ## Credits
 A huge thanks to the Udacity team without whom this project would not have been possible.
 
 ## License
 This software is open and free to use as you wish.
+
+We ❤️ [Udacity!](https://udacity.com)
 
