@@ -201,7 +201,7 @@ def time_stats(df, month, day):
     print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def station_stats(df):
@@ -231,7 +231,7 @@ def station_stats(df):
     print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def trip_duration_stats(df):
@@ -255,7 +255,7 @@ def trip_duration_stats(df):
     print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 
@@ -292,7 +292,7 @@ def user_stats(df, city):
     print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def raw_data_view(df):
@@ -318,7 +318,7 @@ def raw_data_view(df):
 
         i += 5
 
-    print('\n','-'*40)
+    print('\n','-'*50)
 
 
 def main():
