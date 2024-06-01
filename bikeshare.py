@@ -43,6 +43,8 @@ def get_filters():
                 print('Oops! That doesn\'t appear to be a valid city input, check your spelling and try again :-)\n')
         except ValueError as ve:
             print('It appears you entered an incorrect value! Please try again :-)')
+        except KeyError as ke:
+            print('Appears you enterred an incorrect key! Please try again.')
         except BaseException as e:
             print('Oops! That doesn\'t appear to be a valid city input, check your spelling and try again :-)\n')
         
@@ -76,6 +78,8 @@ def get_filters():
                 print('That does not appear to be a correct filter option!. Please check your spelling and try again :-)')
         except ValueError as ve:
             print('It appears you entered an incorrect value! Please try again :-)')
+        except KeyError as ke:
+            print('Appears you enterred an incorrect key! Please try again.')
         except BaseException as be:
             print('That does not appear to be a correct filter option!. Please check your spelling and try again :-)')
 
