@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 #string to display the time period the user selects for filtering
-FILTER_PERIOD = ""
+USER_FILTER_PERIOD = ""
 
 # month lists to use to get user input for month and conversion to Month name (january, february, ... , june)
 month_full = ['january', 'february', 'march', 'april', 'may', 'june']
@@ -23,7 +23,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "none" to apply no day filter
     """
 
-    global FILTER_PERIOD 
+    global USER_FILTER_PERIOD 
 
     print('Hello! Let\'s explore some US bikeshare data!')
 
@@ -57,20 +57,20 @@ def get_filters():
                 if match_filter.string == 'both':
                     month = month_input()
                     day = day_input()
-                    FILTER_PERIOD = match_filter.string + ' - ' + month_full[month -1].title() + ', ' + day
+                    USER_FILTER_PERIOD = match_filter.string + ' - ' + month_full[month -1].title() + ', ' + day
                     break
                 elif match_filter.string == 'month':
                     month = month_input()
                     day = None
-                    FILTER_PERIOD = match_filter.string + ' - ' + month_full[month-1].title()
+                    USER_FILTER_PERIOD = match_filter.string + ' - ' + month_full[month-1].title()
                     break
                 elif match_filter.string == 'day':
                     month = None
                     day = day_input()
-                    FILTER_PERIOD = match_filter.string + ' - ' + day
+                    USER_FILTER_PERIOD = match_filter.string + ' - ' + day
                     break
                 elif match_filter.string == 'none':
-                    FILTER_PERIOD = match_filter.string
+                    USER_FILTER_PERIOD = match_filter.string
                     month = None
                     day = None
                     break
@@ -198,7 +198,7 @@ def time_stats(df, month, day):
     print("Most often during this hour: {}:00, with a Count of: {}".format(df['Hour'].mode()[0], df['Hour'].value_counts()[df['Hour'].mode()[0]]))
 
     # disply the filter period used
-    print("\nfilter used: {}".format(FILTER_PERIOD))
+    print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
     print('-'*40)
@@ -228,7 +228,7 @@ def station_stats(df):
     print("The most frequently taken Trip is from: ", df['Trip'].mode()[0])
 
     # disply the filter period used
-    print("\nfilter used: {}".format(FILTER_PERIOD))
+    print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
     print('-'*40)
@@ -252,7 +252,7 @@ def trip_duration_stats(df):
     print("Average duration for trips (s): ", df['Trip Duration'].mean())
 
     # disply the filter period used
-    print("\nfilter used: {}".format(FILTER_PERIOD))
+    print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
     print('-'*40)
@@ -289,7 +289,7 @@ def user_stats(df, city):
 
 
     # disply the filter period used
-    print("\nfilter used: {}".format(FILTER_PERIOD))
+    print("\nfilter used: {}".format(USER_FILTER_PERIOD))
 
     print("\nThis took %s seconds to calculate!" % (time.time() - start_time))
     print('-'*40)
