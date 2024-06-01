@@ -169,12 +169,12 @@ def load_data(city, month, day):
 
 
 def time_stats(df, month, day):
-    """Displays statistics on the most frequent times of travel.
+    """Displays statistics on the most frequent times of travel in the respective month, day and hour
 
     Args:
-        (DataFrame) df - dataframe, based on filtered raw data, to base analysis on 
-        (str) month - name of the month the data in df is filtered on, or "None" if no month filter applied
-        (str) day - name of the day of the week the data in df is filtered on, or "None" if no day filter applied    
+        (DataFrame) df - pandas dataframe, based on filtered raw data, to base analysis on 
+        (str) month - name of the month that the data in df is filtered on, or "None" if no month filter applied
+        (str) day - name of the day of the week that the data in df is filtered on, or "None" if no day filter applied    
     """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
